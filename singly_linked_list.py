@@ -129,7 +129,7 @@ class SinglyLinkedList:
             node_index += 1
 
     #12
-    def sort(self):
+    def sort(self): # Sort ascending
         if not self.head:
             return
 
