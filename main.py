@@ -67,7 +67,7 @@ while True:
                 a_llist.deleteFromHead()
             elif position == 'end':
                 last_node = a_llist.get_node(-1)
-                a_llist.deleteFromTail(last_node)
+                a_llist.deleteFromTail()
             else:
                 index = int(position)
                 ref_node = a_llist.get_node(index)
