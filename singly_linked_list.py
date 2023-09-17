@@ -24,11 +24,8 @@ class SinglyLinkedList:
         # 3
 
     def addAfter(self, p, x):  # Add node x after node p
-        new_node = Node(x)
-        if p is None:
-            return
-        new_node.next = p.next
-        p.next = new_node
+        x.next = p.next
+        p.next = x
 
         # 4
 
@@ -68,7 +65,6 @@ class SinglyLinkedList:
             return None  # The list is empty
 
         if self.head.next is None:
-            # If there's only one node in the list, delete it and return its data
             deleted_data = self.head.data
             self.head = None
             return deleted_data
@@ -218,10 +214,7 @@ class SinglyLinkedList:
 
         # 16
 
-    def addBefore(self, p, x):
-        if self.head is None:
-            return
-
+    def addBefore(self, p, x): # Add node x before node p
         prev_node = self.get_prev_node(p)
         self.addAfter(prev_node, x)
 
